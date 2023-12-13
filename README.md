@@ -1,6 +1,6 @@
 # Nuxt with Deno KV
 
-A demonstration using [Nuxt](https://nuxt.com) with server-side rendering on the edge on [Deno Deploy](https://deno.com/deploy) using [Deno KV](https://docs.deno.com/kv/manual) as database.
+A collaborative todo-list app built using [Nuxt](https://nuxt.com) with server-side rendering on the edge on [Deno Deploy](https://deno.com/deploy) and [Deno KV](https://docs.deno.com/kv/manual) as database.
 
 Demo: https://nuxt-todos-kv.deno.dev
 
