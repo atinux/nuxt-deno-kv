@@ -6,6 +6,7 @@ Demo: https://nuxt-todos-kv.deno.dev
 
 It also leverages [Deno KV Watch](https://deno.com/blog/kv-watch) and Server-Sent Events to update the UI in real-time for a shared todo list.
 
+https://github.com/Atinux/nuxt-deno-kv/assets/904724/2eeaa1a2-a4ab-47d2-b40a-17cd08d0c20b
 
 ## Features
 
