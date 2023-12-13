@@ -29,7 +29,9 @@ jobs:
           node-version: lts/*
 
       - name: Build step
-        run: "npm install && NITRO_PRESET=deno-deploy npm run build" # 📝 Update the build command(s) if necessary
+        run: "pnpm i && npm run build --preset=deno_deploy"
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
