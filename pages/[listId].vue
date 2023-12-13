@@ -20,9 +20,7 @@ onMounted(() => {
     title: 'Shared Todo List Created',
     description: 'Share this page to collaborate with others.'
   })
-  const sse = new EventSource(`/api/${listId}`)
-
-  sse.addEventListener('message', (event) => {
+  new EventSource(`/api/${listId}`).addEventListener('message', (event) => {
     todos.value = JSON.parse(event.data)
   })
 })
