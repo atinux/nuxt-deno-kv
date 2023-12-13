@@ -7,4 +7,8 @@ export const useKv = async () => {
     const { openKv } = await OpenKV()
     return openKv('kv.db')
   }
+  throw createError({
+    statusCode: 500,
+    message: 'Could not find a Deno KV for production, make sure to deploy on Deno Deploy.'
+  })
 }

@@ -5,6 +5,8 @@ async function listTodos(kv: Kv, listId: string) {
   const iter = await kv.list({ prefix: ['list', listId] }, { consistency: 'strong' })
   const todos = []
   for await (const todo of iter) todos.push(todo.value)
+
+  todos.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
   return todos
 }
 
