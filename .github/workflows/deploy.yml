@@ -4,35 +4,32 @@ on:
     branches: main
   pull_request:
     branches: main
-
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-
     permissions:
       id-token: write # Needed for auth with Deno Deploy
       contents: read # Needed to clone the repository
-
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-
       - name: Install Deno
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
-
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Build step
         run: "pnpm i && npm run build --preset=deno_deploy"
         env:
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
-
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
