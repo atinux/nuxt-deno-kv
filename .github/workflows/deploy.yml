@@ -27,7 +27,7 @@ jobs:
         with:
           version: 8
       - name: Build step
-        run: "pnpm i && npm run build --preset=deno_deploy"
+        run: "pnpm i && npx nuxt build --preset=deno_deploy"
         env:
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
       - name: Upload to Deno Deploy
