@@ -1,4 +1,4 @@
-# Nuxt Guestbook
+# Nuxt Deno KV
 
 [![screenshot](./public/social-image.png)](https://nuxt-guestbook.pages.dev)
 
@@ -50,7 +50,7 @@ npm run dev
 
 Create a CF pages deployment linked to your GitHub repository and select the Nuxt.js preset.
 
-To build the guestbook in production, you need a [Nuxt UI Pro](https://ui.nuxt.com/pro) license.
+To build the guestbook in production, you need a [Nuxt UI Pro](https://ui.nuxt.com/pro) license, if you don't want to use UI Pro, you can remove the `@nuxt/ui-pro` from the dependencies abd `nuxt.config.ts`.
 
 ### Environment variables
 

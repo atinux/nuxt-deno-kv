@@ -8,5 +8,5 @@ nuxt.d.ts
 dist
 .vercel
 .netlify
-db.sqlite
-db.sqlite-*
+kv.db
+kv.db*
